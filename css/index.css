@@ -1,0 +1,684 @@
+@import "reset.css";
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+  .border-1px::before {
+    transform: scaleY(0.5);
+  }
+}
+@media only screen and (-webkit-device-pixel-ratio: 3) {
+  .border-1px::before {
+    transform: scaleY(0.333333);
+  }
+}
+#app {
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  position: relative;
+}
+#app #content {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+#app #content >section {
+  display: none;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+#app #content >section.on {
+  display: block;
+}
+#app #content >section:nth-child(1) {
+  *zoom: 1;
+}
+#app #content >section:nth-child(1) .swiper-container {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+#app #content >section:nth-child(1) .swiper-container::before {
+  content: '';
+  position: absolute;
+  z-index: 200;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  transform: scaleY(0.5);
+}
+#app #content >section:nth-child(1) .swiper-wrapper {
+  height: 100%;
+  background: #fff;
+}
+#app #content >section:nth-child(1) .swiper-wrapper .swiper-slide {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+#app #content >section:nth-child(1) .swiper-wrapper .swiper-slide li {
+  width: 25%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+#app #content >section:nth-child(1) .swiper-wrapper .swiper-slide li img {
+  width: 50%;
+  height: 50%;
+}
+#app #content >section:nth-child(1) .msite-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 45px;
+  background: #02a774;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#app #content >section:nth-child(1) a:nth-child(1) .icon-sousuo {
+  position: absolute;
+  left: 15px;
+  top: 30%;
+  color: #fff;
+  font-size: 24px;
+}
+#app #content >section:nth-child(1) a:nth-child(2) span {
+  font-size: 18px;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+#app #content >section:nth-child(1) a:nth-child(3) {
+  display: inline-block;
+  font-size: 14px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#app #content >section:nth-child(1) a:nth-child(3) span {
+  color: #fff;
+}
+#app #content >section:nth-child(1) .msite-shop-list {
+  background: #fff;
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+}
+#app #content >section:nth-child(1) .shop-header {
+  padding-left: 10px;
+  font-size: 14px;
+  color: #999;
+}
+#app #content >section:nth-child(1) .shop-list {
+  width: 100%;
+}
+#app #content >section:nth-child(1)::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#app #content >section:nth-child(1) .shop-li {
+  position: relative;
+  width: 100%;
+  padding-left: 10px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  *zoom: 1;
+}
+#app #content >section:nth-child(1) .shop-li::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#app #content >section:nth-child(1) .shop-li .shop-left {
+  float: left;
+  padding-right: 10px;
+  width: 23%;
+  height: 75px;
+  box-sizing: border-box;
+}
+#app #content >section:nth-child(1) .shop-li .shop-left img {
+  height: 100%;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right {
+  float: left;
+  width: 77%;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-title {
+  width: 100%;
+  position: relative;
+  *zoom: 1;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-title::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-title span {
+  float: left;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 140px;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-title span:before {
+  display: inline-block;
+  content: '品牌';
+  background: #ffd930;
+  font-size: 14px;
+  margin-right: 4px;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-title .shop-detail-ul {
+  float: right;
+  margin-left: -50px;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-title .shop-detail-ul li {
+  font-size: 10px;
+  color: #999;
+  float: left;
+  padding: 2px;
+  border: 1px solid #f1f1f1;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order {
+  float: left;
+  width: 100%;
+  margin: 10px 0;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-left {
+  float: left;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-left .stars {
+  float: left;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-left .stars .star {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-size: 10px 10px;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-left .stars .star.on {
+  background-image: url("../images/stars/star_on@2x.png");
+}
+@media only screen and (-webkit-device-pixel-ratio: 3) {
+  #app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-left .stars .star.on {
+    background-image: url("../images/stars/star_on@3x.png");
+  }
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-left .stars .star.half {
+  background-image: url("../images/stars/star_half@2x.png");
+}
+@media only screen and (-webkit-device-pixel-ratio: 3) {
+  #app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-left .stars .star.half {
+    background-image: url("../images/stars/star_half@3x.png");
+  }
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-left .stars .star.off {
+  background-image: url("../images/stars/star_off@2x.png");
+}
+@media only screen and (-webkit-device-pixel-ratio: 3) {
+  #app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-left .stars .star.off {
+    background-image: url("../images/stars/star_off@3x.png");
+  }
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-left .rating-section {
+  float: left;
+  color: #ff6000;
+  margin: 0 5px;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-left .order-right {
+  float: left;
+  font-size: 10px;
+  transform: scale(0.9);
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-right {
+  float: right;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-right .delivery-style {
+  float: left;
+  display: inline-block;
+  font-size: 8px;
+  padding: 2px;
+  transform: scale(0.8);
+  border-radius: 2px;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-right .delivery-style.delivery-left {
+  color: #fff;
+  background: #02a774;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-rating-order .shop-rating-order-right .delivery-style.delivery-right {
+  color: #02a774;
+  border: 1px solid #02a774;
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-distance {
+  float: left;
+  color: #666;
+  transform: scale(0.9);
+}
+#app #content >section:nth-child(1) .shop-li .shop-right .shop-distance .segmentation {
+  margin: 0 3px;
+}
+#app #content >section:nth-child(2) .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 45px;
+  background: #02a774;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  font-size: 22px;
+}
+#app #content >section:nth-child(2) .search-form {
+  background: #fff;
+  padding: 12px 8px;
+}
+#app #content >section:nth-child(2) .search-form .search-input {
+  outline: none;
+  border-radius: 4px;
+  padding: 0 4px;
+  font-weight: bold;
+  width: 79%;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  color: #333;
+  height: 35px;
+}
+#app #content >section:nth-child(2) .search-form .search-button {
+  border-radius: 2px;
+  width: 20%;
+  height: 35px;
+  background: #02a774;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+#app #content >section:nth-child(3) .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 45px;
+  background: #02a774;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  font-size: 22px;
+}
+#app #content >section:nth-child(3) .order-no-login {
+  width: 66%;
+  margin: 0 auto;
+  text-align: center;
+}
+#app #content >section:nth-child(3) .order-no-login img {
+  margin-top: 80px;
+  width: 100%;
+}
+#app #content >section:nth-child(3) .order-no-login h3 {
+  color: #6a6a6a;
+  font-size: 16px;
+  margin: 5px 0;
+}
+#app #content >section:nth-child(3) .order-no-login .order-botton {
+  background: #02a774;
+  color: #fff;
+  border: none;
+  width: 100px;
+  height: 35px;
+  border-radius: 8px;
+  outline: none;
+}
+#app #content >section:nth-child(4) .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 45px;
+  background: #02a774;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  font-size: 22px;
+}
+#app #content >section:nth-child(4) .profile-number {
+  margin-top: 0.5px;
+  padding: 15px 20px;
+  background: #02a774;
+  *zoom: 1;
+}
+#app #content >section:nth-child(4) .profile-number::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#app #content >section:nth-child(4) .profile-number a {
+  display: block;
+  *zoom: 1;
+}
+#app #content >section:nth-child(4) .profile-number a::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#app #content >section:nth-child(4) .profile-number a .profile-number-left {
+  float: left;
+}
+#app #content >section:nth-child(4) .profile-number a .profile-image {
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+#app #content >section:nth-child(4) .profile-number a .profile-image .icon-person {
+  font-size: 60px;
+  background: #e4e4e4;
+}
+#app #content >section:nth-child(4) .profile-number a .profile-number-right {
+  float: left;
+  padding-left: 20px;
+  padding-top: 10px;
+  position: relative;
+  width: 76%;
+}
+#app #content >section:nth-child(4) .profile-number a .profile-number-right p {
+  font-weight: bold;
+  color: #fff;
+}
+#app #content >section:nth-child(4) .profile-number a .profile-number-right p.profile-info-top {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+#app #content >section:nth-child(4) .profile-number a .profile-number-right p.profile-info-middle {
+  margin-top: 10px;
+  font-size: 14px;
+}
+#app #content >section:nth-child(4) .profile-number a .profile-number-right p .user-info {
+  display: inline-block;
+  margin-left: -15px;
+}
+#app #content >section:nth-child(4) .profile-number a .profile-number-right p .user-info .iconfont {
+  font-size: 30px;
+  vertical-align: text-top;
+}
+#app #content >section:nth-child(4) .profile-number a .profile-number-right p .user-right {
+  font-size: 14px;
+  margin-left: -14px;
+  vertical-align: text-bottom;
+}
+#app #content >section:nth-child(4) .profile-number a .profile-number-right .boult {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: #fff;
+}
+#app #content >section:nth-child(4) .info-data-list {
+  width: 100%;
+  *zoom: 1;
+}
+#app #content >section:nth-child(4) .info-data-list::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#app #content >section:nth-child(4) .info-data-list a {
+  float: left;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
+#app #content >section:nth-child(4) .info-data-list a .info-data-top {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px 0 10px 0;
+}
+#app #content >section:nth-child(4) .info-data-list a .info-data-top span {
+  color: #000;
+  font-size: 14px;
+}
+#app #content >section:nth-child(4) .info-data-list a .info-data-bottom {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+#app #content >section:nth-child(4) .info-data-list a:nth-child(1) .info-data-top {
+  color: #f90;
+}
+#app #content >section:nth-child(4) .info-data-list a:nth-child(2) .info-data-top {
+  color: #ff5f3e;
+}
+#app #content >section:nth-child(4) .info-data-list a:nth-child(3) .info-data-top {
+  color: #6ac20b;
+}
+#app #content >section:nth-child(4) .info-data-list a:nth-child(2) {
+  border-left: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+}
+#app #content >section:nth-child(4) .profile-my-order {
+  width: 100%;
+  margin-top: 10px;
+  position: relative;
+}
+#app #content >section:nth-child(4) .profile-my-order::before {
+  content: '';
+  position: absolute;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e3e3e3;
+}
+#app #content >section:nth-child(4) .profile-my-order a {
+  background: #fff;
+  display: block;
+  width: 100%;
+  position: relative;
+  *zoom: 1;
+}
+#app #content >section:nth-child(4) .profile-my-order a::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#app #content >section:nth-child(4) .profile-my-order a.my-order {
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+#app #content >section:nth-child(4) .profile-my-order a.my-order:nth-child(1) >span {
+  color: #02a774;
+}
+#app #content >section:nth-child(4) .profile-my-order a.my-order:nth-child(2) >span {
+  color: #ff5f3e;
+}
+#app #content >section:nth-child(4) .profile-my-order a.my-order:nth-child(3) >span {
+  color: #f90;
+}
+#app #content >section:nth-child(4) .profile-my-order a.my-order >span {
+  float: left;
+  font-size: 50px;
+  position: relative;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+#app #content >section:nth-child(4) .profile-my-order a.my-order >span .iconfont {
+  font-size: 30px;
+}
+#app #content >section:nth-child(4) .profile-my-order a.my-order .my-order-div {
+  float: left;
+  width: 91%;
+  box-sizing: border-box;
+  padding: 18px 0;
+  position: relative;
+  font-size: 16px;
+}
+#app #content >section:nth-child(4) .profile-my-order a.my-order .my-order-div::before {
+  content: '';
+  position: absolute;
+  z-index: 200;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e3e3e3;
+  transform: scaleY(0.5);
+}
+#app #content >section:nth-child(4) .profile-my-order a.my-order .my-order-div .arrow {
+  float: right;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #e3e3e3;
+}
+#app .open {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 300;
+  background: #fff;
+}
+#app .open .loginContainer {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+#app .open .loginContainer .loginInner {
+  position: relative;
+  padding-top: 70px;
+}
+#app .open .loginContainer .loginInner .login-header .login-header-logo {
+  font-size: 40px;
+  color: #02a774;
+  font-weight: bold;
+}
+#app .open .loginContainer .loginInner .login-header .login_header_title {
+  margin-top: 30px;
+}
+#app .open .loginContainer .loginInner .login-header .login_header_title a {
+  margin: 10px 10px 0px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+#app .open .loginContainer .loginInner .login-header .login_header_title a.active {
+  border-bottom: 2px solid #02a774;
+  color: #02a774;
+}
+#app .open .loginContainer .loginInner .login-content {
+  width: 100%;
+  margin-top: 10px;
+}
+#app .open .loginContainer .loginInner .login-content form div {
+  display: none;
+}
+#app .open .loginContainer .loginInner .login-content form div input {
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  outline: #02a774;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+#app .open .loginContainer .loginInner .login-content form div input:focus {
+  border: 1px solid #02a774;
+}
+#app .open .loginContainer .loginInner .login-content form div p {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #999;
+}
+#app .open .loginContainer .loginInner .login-content form div p span {
+  color: #02a774;
+}
+#app .open .loginContainer .loginInner .login-content form div.login-on {
+  display: block;
+}
+#app .open .loginContainer .loginInner .login-content form >section {
+  margin-top: 20px;
+}
+#app .open .loginContainer .loginInner .login-content form >section .login_submit {
+  display: block;
+  width: 100%;
+  background: #4cd96f;
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  height: 40px;
+}
+#app .open .loginContainer .loginInner .login-content form >section .about_us {
+  display: block;
+  font-size: 12px;
+  margin-top: 20px;
+  text-align: center;
+  color: #999;
+}
+#app .open .loginContainer .loginInner .login-content form .go-back {
+  position: absolute;
+  left: -20px;
+  top: 15px;
+}
+#app .close {
+  display: none;
+}
+#app footer {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  background: #fff;
+}
+#app footer::before {
+  content: '';
+  position: absolute;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+#app footer .guide-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#app footer .guide-item span:first-child .iconfont {
+  font-size: 22px;
+}
+#app footer .guide-item span:last-child {
+  font-size: 14px;
+}
+#app footer .guide-item.active {
+  color: #02a774;
+}
